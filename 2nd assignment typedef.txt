@@ -1,0 +1,42 @@
+===================================== TYPEDEF =========================================
+
+1) In the following code, the P2 is Integer Pointer or Integer?
+typedef int *ptr;
+ptr p1, p2;
+->p2 is integer pointer
+
+2)  In the following code what is 'P'?
+typedef char *charp;
+const charp P;
+->p is constant character pointer
+
+3) What is x in the following program?
+#include<stdio.h>
+int main()
+{
+    typedef char (*(*arrfptr[3])())[10];
+    arrfptr x;
+    return 0;
+}
+-> x is character pointer to (array of function pointer of size 3)of size 10
+
+4) What is apfArithmatics in the below statement?
+typedef int (*apfArithmatics[3])(int,int); 
+->ApfArithmatics is integer (array of function pointers with two integer parameters) of size 3
+
+5) What is pf in the below statement?
+typedef int (*pf)(int);
+->pf is function pointer with one integer parameter and integer return type
+
+6) What do the following declarations mean?
+typedef char *pc;
+typedef pc fpc();
+typedef fpc *pfpc;
+typedef pfpc fpfpc();
+typedef fpfpc *pfpfpc;
+pfpfpc a[N];
+->
+
+
+
+7) Write few programs using typedef on structures and enums.
