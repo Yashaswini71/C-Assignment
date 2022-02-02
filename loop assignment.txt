@@ -1,0 +1,128 @@
+loops assigments:-
+
+1.Write a program to print the below pattern using while loop:
+
+sol:#include<stdio.h>
+void main()
+{
+    int i,j,k,space,rows;
+    printf("enter no of rows:");
+    scanf("%d",&rows);
+        
+    for(i=0;i<=rows;i++)
+    {
+        if(i==0)
+        {
+            for(k=0;k<=rows;k++)
+            {
+                printf(" ");
+            }
+        }
+        for(space=0;space<=rows-i;space++)
+        {
+            printf(" ");
+        }
+        for(j=1;j<(2*i-1);j++)
+        {
+            if(j==1)
+                printf("/");
+            else if(j==(2*i-2))
+                printf("%c",'\\');
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+    for(i=0;i<rows;i++)
+    {
+        printf(" _");
+    }
+}
+
+
+2. Switch case 
+sol:
+#include<stdio.h>
+void main()
+{
+    double y=1,s=2,a;char choice;
+    //printf("enter value of y\t");scanf("%lf",&y);
+    //printf("\nenter value of s\t");scanf("%lf",&s);
+    printf("\nselect one of the choice\n'a' - addition\n's' - substraction\n");
+    scanf("%c",&choice);
+    switch(choice)
+    {
+        case 'a':
+        {
+            a=y+s;printf("\nsum is %lf",a);
+        }
+        break;
+        case 's':
+        {
+            a=y-s;printf("\ndiff is %lf",a);
+        }
+        break;
+        default:
+        {
+            printf("\nnoaction");
+        }
+    }
+}
+
+
+3.Break/Continue:
+#include<stdio.h>
+void main()
+{
+    int i=1,sum=0,n=0;
+    while(i<11)
+    {
+       printf("\nenter the number %d\t",i);scanf("%d",&n);
+       if(n==0) {break;}
+       else if(n<0) {continue;}
+       else {sum+=n;i++;}
+       //i++;
+    }
+    printf("sum=%d",sum);
+}
+
+
+4.A sequence must be constraint on its values.
+
+sol:
+#include<stdio.h>
+void main()
+{
+    int sequence[]={1,2,2,3,3,3,4,4,4,4},input[10],i,validity;
+    for(i=0;i<10;i++)
+    {
+        printf("\nenter the number");scanf("%d",&input[i]);
+        (input[i]==sequence[i])?(validity=1):(validity=0);
+    }
+    printf("\n\ncorrect sequence:\t");
+    for(i=0;i<10;i++)
+        printf("%d",sequence[i]);
+    printf("\ninput sequence:\t");
+    for(i=0;i<10;i++)
+        printf("%d",input[i]);
+    (validity==1)?printf("\nseqence is valid"):printf("\nseqence is invalid");
+}
+
+5.Write a c program to print all even and odd numbers btwn 1-100  
+sol:
+#include<stdio.h>
+void main()
+{
+    printf("Even numbers are:");
+    for(int i=1;i<101;i++)
+    {
+        if((i%2)==0)
+            printf("%d ",i);
+    }
+    printf("\nOdd numbers are:");
+    for(int i=1;i<101;i++)
+    {
+        if((i%2)!=0)
+            printf("%d ",i);
+    }
+}
